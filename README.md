@@ -1,7 +1,9 @@
 # plotAPI
 
 The plot API from https://github.com/observablehq/plot as a JSON file.
+
 ----------
+
 The icons in the marks subfolder are icons from Twitter Twemoji
 
 - Graphics Author: Copyright 2020 Twitter, Inc and other contributors (https://github.com/twitter/twemoji)
