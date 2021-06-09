@@ -1,7 +1,7 @@
 # plotAPI
 
 The plot API from https://github.com/observablehq/plot as a JSON file.
-
+The plotAPI.json file has been created in this observable: 
 ----------
 
 The icons in the marks subfolder are icons from Twitter Twemoji
