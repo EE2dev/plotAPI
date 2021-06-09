@@ -1,7 +1,7 @@
 # plotAPI
 
 The plot API v0.1.0 from https://github.com/observablehq/plot as a JSON file.
-- A visualization of the plot API is here: https://ee2dev.github.io/plot/
+- A visualization (based on [d3-indented-tree](https://github.com/EE2dev/d3-indented-tree)) of the plot API is here: https://ee2dev.github.io/plot/
 - The plotAPI.json file has been created in this observable: 
 ----------
 
