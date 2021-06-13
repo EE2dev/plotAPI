@@ -7959,646 +7959,653 @@
       "type": "options",
       "children": [
         {
-          "name": "marginTop",
-          "type": "constant number",
-          "info": "The top margin",
+          "name": "{}",
+          "type": "options object",
+          "children": [
+            {
+              "name": "marginTop",
+              "type": "constant number",
+              "info": "The top margin",
+              "ID": 1390
+            },
+            {
+              "name": "marginRight",
+              "type": "constant number",
+              "info": "The right margin",
+              "ID": 1391
+            },
+            {
+              "name": "marginBottom",
+              "type": "constant number",
+              "info": "The bottom margin",
+              "ID": 1392
+            },
+            {
+              "name": "marginLeft",
+              "type": "constant number",
+              "info": "The left margin",
+              "ID": 1393
+            },
+            {
+              "name": "width",
+              "type": "constant number",
+              "info": "The outer width of the plot (including margins). Default is 640",
+              "ID": 1394
+            },
+            {
+              "name": "height",
+              "type": "constant number",
+              "info": "The outer height of the plot (including margins). The default height is 396 if the plot has a y or fy scale; otherwise it is 90 if the plot has an fx scale, or 60 if it does not",
+              "ID": 1395
+            },
+            {
+              "name": "style",
+              "type": "constant string",
+              "info": "Custom styles to override Plot’s defaults",
+              "ID": 1396
+            },
+            {
+              "name": "grid",
+              "type": "constant boolean",
+              "info": "Flag determining whether to draw grid lines for x and y across the plot for each tick. Shorthand for scale specific grip option",
+              "ID": 1397
+            },
+            {
+              "name": "inset",
+              "type": "constant number",
+              "info": "Number of pixels to inset the default ranges for x and y. Shorthand for scale specific inset option",
+              "ID": 1398
+            },
+            {
+              "name": "round",
+              "type": "constant boolean",
+              "info": "Rounds the output value for the x and y scale to the nearest integer (whole pixel). Shorthand for scale specific round option",
+              "ID": 1399
+            },
+            {
+              "name": "align",
+              "type": "constant number",
+              "info": "A proportion in [0,1] determining where to distribute points or bands (0 = at start, 0.5 = at middle, 1 = at end) for ordinal x and y scales. Shorthand for scale specific align option",
+              "ID": 1400
+            },
+            {
+              "name": "padding",
+              "type": "constant number",
+              "info": "A proportion in [0,1] determining how much of the range to reserve to separate adjacent bands for x and y band scales. Shorthand for scale specific padding option",
+              "ID": 1401
+            },
+            {
+              "name": "nice",
+              "type": "constant number",
+              "info": "For quantitative scales: if true (or a tick count), extend the domain to nice round values. Shorthand for scale specific nice option",
+              "ID": 1402
+            },
+            {
+              "name": "caption",
+              "type": "constant string",
+              "info": "Wraps the generated SVG element in an HTML figure element with a figcaption (as string or html tagges template literal. It returns the figure",
+              "ID": 1403
+            },
+            {
+              "name": "marks",
+              "type": "marks array",
+              "info": "The marks option specifies an array of marks to render. Each mark has its own data and options",
+              "ID": 1404
+            },
+            {
+              "name": "x",
+              "type": "scale object",
+              "children": [
+                {
+                  "name": "domain",
+                  "type": "constant array",
+                  "info": "The extent of the inputs, typically [min, max], or an array of ordinal or categorical values",
+                  "ID": 1451
+                },
+                {
+                  "name": "range",
+                  "type": "constant array",
+                  "info": "The extent of the outputs (visual values), typically [min, max], or an array of ordinal or categorical values",
+                  "ID": 1452
+                },
+                {
+                  "name": "reverse",
+                  "type": "constant boolean",
+                  "info": "Reverses the domain",
+                  "ID": 1453
+                },
+                {
+                  "name": "type",
+                  "type": "constant string",
+                  "children": [
+                    {
+                      "name": "'linear'",
+                      "type": "quantitative data",
+                      "info": "The default linear transform scale",
+                      "ID": 1455
+                    },
+                    {
+                      "name": "'pow'",
+                      "type": "quantitative data",
+                      "info": "The power (exponential) transform scale",
+                      "ID": 1456
+                    },
+                    {
+                      "name": "'sqrt'",
+                      "type": "quantitative data",
+                      "info": "The square-root transform (pow transform with exponent = 0.5) scale",
+                      "ID": 1457
+                    },
+                    {
+                      "name": "'log'",
+                      "type": "quantitative data",
+                      "info": "The logarithmic transform scale. Can only be used when the domain does not include zero. The base defaults to 10",
+                      "ID": 1458
+                    },
+                    {
+                      "name": "'symlog'",
+                      "type": "quantitative data",
+                      "info": "The bi-symmetric logarithmic transform scale",
+                      "ID": 1459
+                    },
+                    {
+                      "name": "'ordinal'",
+                      "type": "ordinal data",
+                      "info": "The ordinal scale",
+                      "ID": 1460
+                    },
+                    {
+                      "name": "'utc'",
+                      "type": "temporal data",
+                      "info": "The UTC time scale. (Default for temporal data)",
+                      "ID": 1461
+                    },
+                    {
+                      "name": "'time'",
+                      "type": "temporal data",
+                      "info": "The local time scale",
+                      "ID": 1462
+                    },
+                    {
+                      "name": "'point'",
+                      "type": "ordinal data",
+                      "info": "The point scale",
+                      "ID": 1463
+                    },
+                    {
+                      "name": "'band'",
+                      "type": "ordinal data",
+                      "info": "The band scale",
+                      "ID": 1464
+                    },
+                    {
+                      "name": "'identity'",
+                      "type": "any data",
+                      "info": "The identity scale",
+                      "ID": 1465
+                    }
+                  ],
+                  "info": "Typically the scale type is inferred automatically from data: strings and booleans imply an ordinal scale. Dates imply a UTC scale, anything else is linear",
+                  "ID": 1454
+                },
+                {
+                  "name": "exponent",
+                  "type": "constant number",
+                  "info": "Configurable value for the power scale (type: 'pow')",
+                  "ID": 1466
+                },
+                {
+                  "name": "base",
+                  "type": "constant number",
+                  "info": "Configurable value for the log scale (type: 'log'). Default is 10",
+                  "ID": 1467
+                },
+                {
+                  "name": "constant",
+                  "type": "constant number",
+                  "info": "Configurable value for the symlog scale (type: 'symlog'). Default is 1",
+                  "ID": 1468
+                },
+                {
+                  "name": "clamp",
+                  "type": "constant boolean",
+                  "info": "For quantitative scales: if true, clamp input values to the scale’s domain",
+                  "ID": 1469
+                },
+                {
+                  "name": "nice",
+                  "type": "constant number",
+                  "info": "For quantitative scales: if true (or a tick count), extend the domain to nice round values. A top-level nice option is supported as shorthand for setting scale.nice on all scales",
+                  "ID": 1470
+                },
+                {
+                  "name": "zero",
+                  "type": "constant number",
+                  "info": "For quantitative scales: if true, extend the domain to include zero if needed",
+                  "ID": 1471
+                },
+                {
+                  "name": "percent",
+                  "type": "constant number",
+                  "info": "For quantitative scales: if true, transform proportions in [0, 1] to percentages in [0, 100]",
+                  "ID": 1472
+                },
+                {
+                  "name": "transform",
+                  "type": "function",
+                  "info": "Function to be applied to all values before they are passed through the scale",
+                  "ID": 1473
+                },
+                {
+                  "name": "inset",
+                  "type": "constant number",
+                  "info": "Number of pixels to inset the default range",
+                  "ID": 1474
+                },
+                {
+                  "name": "round",
+                  "type": "constant boolean",
+                  "info": "Rounds the output value to the nearest integer (whole pixel)",
+                  "ID": 1475
+                },
+                {
+                  "name": "padding",
+                  "type": "constant number",
+                  "info": "A proportion in [0,1] determining how much of the range to reserve to inset first and last point or band. For ordinal scales",
+                  "ID": 1476
+                },
+                {
+                  "name": "align",
+                  "type": "constant number",
+                  "info": "A proportion in [0,1] determining where to distribute points or bands (0 = at start, 0.5 = at middle, 1 = at end). For ordinal scales",
+                  "ID": 1477
+                },
+                {
+                  "name": "paddingInner",
+                  "type": "constant number",
+                  "info": "A proportion in [0,1] determining how much of the range to reserve to separate adjacent bands. For band scales",
+                  "ID": 1478
+                },
+                {
+                  "name": "paddingOuter",
+                  "type": "constant number",
+                  "info": "A proportion in [0,1] determining how much of the range to reserve to inset first and last band. For band scales",
+                  "ID": 1479
+                },
+                {
+                  "name": "axis",
+                  "type": "constant string",
+                  "info": "The orientation: 'top' or 'bottom' for x; 'left' or 'right' for y; null to suppress",
+                  "ID": 1480
+                },
+                {
+                  "name": "ticks",
+                  "type": "constant number",
+                  "info": "The approximate number of ticks to generate",
+                  "ID": 1481
+                },
+                {
+                  "name": "tickSize",
+                  "type": "constant number",
+                  "info": "The size of each tick (in pixels; default 6)",
+                  "ID": 1482
+                },
+                {
+                  "name": "tickPadding",
+                  "type": "constant number",
+                  "info": "The separation between the tick and its label (in pixels; default 3)",
+                  "ID": 1483
+                },
+                {
+                  "name": "tickFormat",
+                  "type": "constant string",
+                  "info": "A function or format specifier to format tick values",
+                  "ID": 1484
+                },
+                {
+                  "name": "tickRotate",
+                  "type": "constant number",
+                  "info": "An angle in degrees clockwise to rotate tick labels. Default is 0",
+                  "ID": 1485
+                },
+                {
+                  "name": "grid",
+                  "type": "constant boolean",
+                  "info": "Flag determining whether to draw grid lines across the plot for each tick",
+                  "ID": 1486
+                },
+                {
+                  "name": "label",
+                  "type": "constant string",
+                  "info": "A string to label the axis",
+                  "ID": 1487
+                },
+                {
+                  "name": "labelAnchor",
+                  "type": "constant string",
+                  "children": [
+                    {
+                      "name": "'top'",
+                      "type": "string literal",
+                      "info": "top",
+                      "ID": 1489
+                    },
+                    {
+                      "name": "'right'",
+                      "type": "string literal",
+                      "info": "right",
+                      "ID": 1490
+                    },
+                    {
+                      "name": "'bottom'",
+                      "type": "string literal",
+                      "info": "bottom",
+                      "ID": 1491
+                    },
+                    {
+                      "name": "'left'",
+                      "type": "string literal",
+                      "info": "left",
+                      "ID": 1492
+                    },
+                    {
+                      "name": "'center'",
+                      "type": "string literal",
+                      "info": "center",
+                      "ID": 1493
+                    }
+                  ],
+                  "info": "The label anchor",
+                  "ID": 1488
+                },
+                {
+                  "name": "labelOffset",
+                  "type": "constant number",
+                  "info": "The label position offset in pixels, typically for facet axes. Default is 0",
+                  "ID": 1494
+                }
+              ],
+              "info": "The scale for the horizontal position",
+              "ID": 1405
+            },
+            {
+              "name": "y",
+              "type": "scale object",
+              "children": [
+                {
+                  "name": "domain",
+                  "type": "constant array",
+                  "info": "The extent of the inputs, typically [min, max], or an array of ordinal or categorical values",
+                  "ID": 1451
+                },
+                {
+                  "name": "range",
+                  "type": "constant array",
+                  "info": "The extent of the outputs (visual values), typically [min, max], or an array of ordinal or categorical values",
+                  "ID": 1452
+                },
+                {
+                  "name": "reverse",
+                  "type": "constant boolean",
+                  "info": "Reverses the domain",
+                  "ID": 1453
+                },
+                {
+                  "name": "type",
+                  "type": "constant string",
+                  "children": [
+                    {
+                      "name": "'linear'",
+                      "type": "quantitative data",
+                      "info": "The default linear transform scale",
+                      "ID": 1455
+                    },
+                    {
+                      "name": "'pow'",
+                      "type": "quantitative data",
+                      "info": "The power (exponential) transform scale",
+                      "ID": 1456
+                    },
+                    {
+                      "name": "'sqrt'",
+                      "type": "quantitative data",
+                      "info": "The square-root transform (pow transform with exponent = 0.5) scale",
+                      "ID": 1457
+                    },
+                    {
+                      "name": "'log'",
+                      "type": "quantitative data",
+                      "info": "The logarithmic transform scale. Can only be used when the domain does not include zero. The base defaults to 10",
+                      "ID": 1458
+                    },
+                    {
+                      "name": "'symlog'",
+                      "type": "quantitative data",
+                      "info": "The bi-symmetric logarithmic transform scale",
+                      "ID": 1459
+                    },
+                    {
+                      "name": "'ordinal'",
+                      "type": "ordinal data",
+                      "info": "The ordinal scale",
+                      "ID": 1460
+                    },
+                    {
+                      "name": "'utc'",
+                      "type": "temporal data",
+                      "info": "The UTC time scale. (Default for temporal data)",
+                      "ID": 1461
+                    },
+                    {
+                      "name": "'time'",
+                      "type": "temporal data",
+                      "info": "The local time scale",
+                      "ID": 1462
+                    },
+                    {
+                      "name": "'point'",
+                      "type": "ordinal data",
+                      "info": "The point scale",
+                      "ID": 1463
+                    },
+                    {
+                      "name": "'band'",
+                      "type": "ordinal data",
+                      "info": "The band scale",
+                      "ID": 1464
+                    },
+                    {
+                      "name": "'identity'",
+                      "type": "any data",
+                      "info": "The identity scale",
+                      "ID": 1465
+                    }
+                  ],
+                  "info": "Typically the scale type is inferred automatically from data: strings and booleans imply an ordinal scale. Dates imply a UTC scale, anything else is linear",
+                  "ID": 1454
+                },
+                {
+                  "name": "exponent",
+                  "type": "constant number",
+                  "info": "Configurable value for the power scale (type: 'pow')",
+                  "ID": 1466
+                },
+                {
+                  "name": "base",
+                  "type": "constant number",
+                  "info": "Configurable value for the log scale (type: 'log'). Default is 10",
+                  "ID": 1467
+                },
+                {
+                  "name": "constant",
+                  "type": "constant number",
+                  "info": "Configurable value for the symlog scale (type: 'symlog'). Default is 1",
+                  "ID": 1468
+                },
+                {
+                  "name": "clamp",
+                  "type": "constant boolean",
+                  "info": "For quantitative scales: if true, clamp input values to the scale’s domain",
+                  "ID": 1469
+                },
+                {
+                  "name": "nice",
+                  "type": "constant number",
+                  "info": "For quantitative scales: if true (or a tick count), extend the domain to nice round values. A top-level nice option is supported as shorthand for setting scale.nice on all scales",
+                  "ID": 1470
+                },
+                {
+                  "name": "zero",
+                  "type": "constant number",
+                  "info": "For quantitative scales: if true, extend the domain to include zero if needed",
+                  "ID": 1471
+                },
+                {
+                  "name": "percent",
+                  "type": "constant number",
+                  "info": "For quantitative scales: if true, transform proportions in [0, 1] to percentages in [0, 100]",
+                  "ID": 1472
+                },
+                {
+                  "name": "transform",
+                  "type": "function",
+                  "info": "Function to be applied to all values before they are passed through the scale",
+                  "ID": 1473
+                },
+                {
+                  "name": "inset",
+                  "type": "constant number",
+                  "info": "Number of pixels to inset the default range",
+                  "ID": 1474
+                },
+                {
+                  "name": "round",
+                  "type": "constant boolean",
+                  "info": "Rounds the output value to the nearest integer (whole pixel)",
+                  "ID": 1475
+                },
+                {
+                  "name": "padding",
+                  "type": "constant number",
+                  "info": "A proportion in [0,1] determining how much of the range to reserve to inset first and last point or band. For ordinal scales",
+                  "ID": 1476
+                },
+                {
+                  "name": "align",
+                  "type": "constant number",
+                  "info": "A proportion in [0,1] determining where to distribute points or bands (0 = at start, 0.5 = at middle, 1 = at end). For ordinal scales",
+                  "ID": 1477
+                },
+                {
+                  "name": "paddingInner",
+                  "type": "constant number",
+                  "info": "A proportion in [0,1] determining how much of the range to reserve to separate adjacent bands. For band scales",
+                  "ID": 1478
+                },
+                {
+                  "name": "paddingOuter",
+                  "type": "constant number",
+                  "info": "A proportion in [0,1] determining how much of the range to reserve to inset first and last band. For band scales",
+                  "ID": 1479
+                },
+                {
+                  "name": "axis",
+                  "type": "constant string",
+                  "info": "The orientation: 'top' or 'bottom' for x; 'left' or 'right' for y; null to suppress",
+                  "ID": 1480
+                },
+                {
+                  "name": "ticks",
+                  "type": "constant number",
+                  "info": "The approximate number of ticks to generate",
+                  "ID": 1481
+                },
+                {
+                  "name": "tickSize",
+                  "type": "constant number",
+                  "info": "The size of each tick (in pixels; default 6)",
+                  "ID": 1482
+                },
+                {
+                  "name": "tickPadding",
+                  "type": "constant number",
+                  "info": "The separation between the tick and its label (in pixels; default 3)",
+                  "ID": 1483
+                },
+                {
+                  "name": "tickFormat",
+                  "type": "constant string",
+                  "info": "A function or format specifier to format tick values",
+                  "ID": 1484
+                },
+                {
+                  "name": "tickRotate",
+                  "type": "constant number",
+                  "info": "An angle in degrees clockwise to rotate tick labels. Default is 0",
+                  "ID": 1485
+                },
+                {
+                  "name": "grid",
+                  "type": "constant boolean",
+                  "info": "Flag determining whether to draw grid lines across the plot for each tick",
+                  "ID": 1486
+                },
+                {
+                  "name": "label",
+                  "type": "constant string",
+                  "info": "A string to label the axis",
+                  "ID": 1487
+                },
+                {
+                  "name": "labelAnchor",
+                  "type": "constant string",
+                  "children": [
+                    {
+                      "name": "'top'",
+                      "type": "string literal",
+                      "info": "top",
+                      "ID": 1489
+                    },
+                    {
+                      "name": "'right'",
+                      "type": "string literal",
+                      "info": "right",
+                      "ID": 1490
+                    },
+                    {
+                      "name": "'bottom'",
+                      "type": "string literal",
+                      "info": "bottom",
+                      "ID": 1491
+                    },
+                    {
+                      "name": "'left'",
+                      "type": "string literal",
+                      "info": "left",
+                      "ID": 1492
+                    },
+                    {
+                      "name": "'center'",
+                      "type": "string literal",
+                      "info": "center",
+                      "ID": 1493
+                    }
+                  ],
+                  "info": "The label anchor",
+                  "ID": 1488
+                },
+                {
+                  "name": "labelOffset",
+                  "type": "constant number",
+                  "info": "The label position offset in pixels, typically for facet axes. Default is 0",
+                  "ID": 1494
+                }
+              ],
+              "info": "The scale for the vertical position",
+              "ID": 1450
+            }
+          ],
           "ID": 1389
-        },
-        {
-          "name": "marginRight",
-          "type": "constant number",
-          "info": "The right margin",
-          "ID": 1390
-        },
-        {
-          "name": "marginBottom",
-          "type": "constant number",
-          "info": "The bottom margin",
-          "ID": 1391
-        },
-        {
-          "name": "marginLeft",
-          "type": "constant number",
-          "info": "The left margin",
-          "ID": 1392
-        },
-        {
-          "name": "width",
-          "type": "constant number",
-          "info": "The outer width of the plot (including margins). Default is 640",
-          "ID": 1393
-        },
-        {
-          "name": "height",
-          "type": "constant number",
-          "info": "The outer height of the plot (including margins). The default height is 396 if the plot has a y or fy scale; otherwise it is 90 if the plot has an fx scale, or 60 if it does not",
-          "ID": 1394
-        },
-        {
-          "name": "style",
-          "type": "constant string",
-          "info": "Custom styles to override Plot’s defaults",
-          "ID": 1395
-        },
-        {
-          "name": "grid",
-          "type": "constant boolean",
-          "info": "Flag determining whether to draw grid lines for x and y across the plot for each tick. Shorthand for scale specific grip option",
-          "ID": 1396
-        },
-        {
-          "name": "inset",
-          "type": "constant number",
-          "info": "Number of pixels to inset the default ranges for x and y. Shorthand for scale specific inset option",
-          "ID": 1397
-        },
-        {
-          "name": "round",
-          "type": "constant boolean",
-          "info": "Rounds the output value for the x and y scale to the nearest integer (whole pixel). Shorthand for scale specific round option",
-          "ID": 1398
-        },
-        {
-          "name": "align",
-          "type": "constant number",
-          "info": "A proportion in [0,1] determining where to distribute points or bands (0 = at start, 0.5 = at middle, 1 = at end) for ordinal x and y scales. Shorthand for scale specific align option",
-          "ID": 1399
-        },
-        {
-          "name": "padding",
-          "type": "constant number",
-          "info": "A proportion in [0,1] determining how much of the range to reserve to separate adjacent bands for x and y band scales. Shorthand for scale specific padding option",
-          "ID": 1400
-        },
-        {
-          "name": "nice",
-          "type": "constant number",
-          "info": "For quantitative scales: if true (or a tick count), extend the domain to nice round values. Shorthand for scale specific nice option",
-          "ID": 1401
-        },
-        {
-          "name": "caption",
-          "type": "constant string",
-          "info": "Wraps the generated SVG element in an HTML figure element with a figcaption (as string or html tagges template literal. It returns the figure",
-          "ID": 1402
-        },
-        {
-          "name": "marks",
-          "type": "marks array",
-          "info": "The marks option specifies an array of marks to render. Each mark has its own data and options",
-          "ID": 1403
-        },
-        {
-          "name": "x",
-          "type": "scale object",
-          "children": [
-            {
-              "name": "domain",
-              "type": "constant array",
-              "info": "The extent of the inputs, typically [min, max], or an array of ordinal or categorical values",
-              "ID": 1450
-            },
-            {
-              "name": "range",
-              "type": "constant array",
-              "info": "The extent of the outputs (visual values), typically [min, max], or an array of ordinal or categorical values",
-              "ID": 1451
-            },
-            {
-              "name": "reverse",
-              "type": "constant boolean",
-              "info": "Reverses the domain",
-              "ID": 1452
-            },
-            {
-              "name": "type",
-              "type": "constant string",
-              "children": [
-                {
-                  "name": "'linear'",
-                  "type": "quantitative data",
-                  "info": "The default linear transform scale",
-                  "ID": 1454
-                },
-                {
-                  "name": "'pow'",
-                  "type": "quantitative data",
-                  "info": "The power (exponential) transform scale",
-                  "ID": 1455
-                },
-                {
-                  "name": "'sqrt'",
-                  "type": "quantitative data",
-                  "info": "The square-root transform (pow transform with exponent = 0.5) scale",
-                  "ID": 1456
-                },
-                {
-                  "name": "'log'",
-                  "type": "quantitative data",
-                  "info": "The logarithmic transform scale. Can only be used when the domain does not include zero. The base defaults to 10",
-                  "ID": 1457
-                },
-                {
-                  "name": "'symlog'",
-                  "type": "quantitative data",
-                  "info": "The bi-symmetric logarithmic transform scale",
-                  "ID": 1458
-                },
-                {
-                  "name": "'ordinal'",
-                  "type": "ordinal data",
-                  "info": "The ordinal scale",
-                  "ID": 1459
-                },
-                {
-                  "name": "'utc'",
-                  "type": "temporal data",
-                  "info": "The UTC time scale. (Default for temporal data)",
-                  "ID": 1460
-                },
-                {
-                  "name": "'time'",
-                  "type": "temporal data",
-                  "info": "The local time scale",
-                  "ID": 1461
-                },
-                {
-                  "name": "'point'",
-                  "type": "ordinal data",
-                  "info": "The point scale",
-                  "ID": 1462
-                },
-                {
-                  "name": "'band'",
-                  "type": "ordinal data",
-                  "info": "The band scale",
-                  "ID": 1463
-                },
-                {
-                  "name": "'identity'",
-                  "type": "any data",
-                  "info": "The identity scale",
-                  "ID": 1464
-                }
-              ],
-              "info": "Typically the scale type is inferred automatically from data: strings and booleans imply an ordinal scale. Dates imply a UTC scale, anything else is linear",
-              "ID": 1453
-            },
-            {
-              "name": "exponent",
-              "type": "constant number",
-              "info": "Configurable value for the power scale (type: 'pow')",
-              "ID": 1465
-            },
-            {
-              "name": "base",
-              "type": "constant number",
-              "info": "Configurable value for the log scale (type: 'log'). Default is 10",
-              "ID": 1466
-            },
-            {
-              "name": "constant",
-              "type": "constant number",
-              "info": "Configurable value for the symlog scale (type: 'symlog'). Default is 1",
-              "ID": 1467
-            },
-            {
-              "name": "clamp",
-              "type": "constant boolean",
-              "info": "For quantitative scales: if true, clamp input values to the scale’s domain",
-              "ID": 1468
-            },
-            {
-              "name": "nice",
-              "type": "constant number",
-              "info": "For quantitative scales: if true (or a tick count), extend the domain to nice round values. A top-level nice option is supported as shorthand for setting scale.nice on all scales",
-              "ID": 1469
-            },
-            {
-              "name": "zero",
-              "type": "constant number",
-              "info": "For quantitative scales: if true, extend the domain to include zero if needed",
-              "ID": 1470
-            },
-            {
-              "name": "percent",
-              "type": "constant number",
-              "info": "For quantitative scales: if true, transform proportions in [0, 1] to percentages in [0, 100]",
-              "ID": 1471
-            },
-            {
-              "name": "transform",
-              "type": "function",
-              "info": "Function to be applied to all values before they are passed through the scale",
-              "ID": 1472
-            },
-            {
-              "name": "inset",
-              "type": "constant number",
-              "info": "Number of pixels to inset the default range",
-              "ID": 1473
-            },
-            {
-              "name": "round",
-              "type": "constant boolean",
-              "info": "Rounds the output value to the nearest integer (whole pixel)",
-              "ID": 1474
-            },
-            {
-              "name": "padding",
-              "type": "constant number",
-              "info": "A proportion in [0,1] determining how much of the range to reserve to inset first and last point or band. For ordinal scales",
-              "ID": 1475
-            },
-            {
-              "name": "align",
-              "type": "constant number",
-              "info": "A proportion in [0,1] determining where to distribute points or bands (0 = at start, 0.5 = at middle, 1 = at end). For ordinal scales",
-              "ID": 1476
-            },
-            {
-              "name": "paddingInner",
-              "type": "constant number",
-              "info": "A proportion in [0,1] determining how much of the range to reserve to separate adjacent bands. For band scales",
-              "ID": 1477
-            },
-            {
-              "name": "paddingOuter",
-              "type": "constant number",
-              "info": "A proportion in [0,1] determining how much of the range to reserve to inset first and last band. For band scales",
-              "ID": 1478
-            },
-            {
-              "name": "axis",
-              "type": "constant string",
-              "info": "The orientation: 'top' or 'bottom' for x; 'left' or 'right' for y; null to suppress",
-              "ID": 1479
-            },
-            {
-              "name": "ticks",
-              "type": "constant number",
-              "info": "The approximate number of ticks to generate",
-              "ID": 1480
-            },
-            {
-              "name": "tickSize",
-              "type": "constant number",
-              "info": "The size of each tick (in pixels; default 6)",
-              "ID": 1481
-            },
-            {
-              "name": "tickPadding",
-              "type": "constant number",
-              "info": "The separation between the tick and its label (in pixels; default 3)",
-              "ID": 1482
-            },
-            {
-              "name": "tickFormat",
-              "type": "constant string",
-              "info": "A function or format specifier to format tick values",
-              "ID": 1483
-            },
-            {
-              "name": "tickRotate",
-              "type": "constant number",
-              "info": "An angle in degrees clockwise to rotate tick labels. Default is 0",
-              "ID": 1484
-            },
-            {
-              "name": "grid",
-              "type": "constant boolean",
-              "info": "Flag determining whether to draw grid lines across the plot for each tick",
-              "ID": 1485
-            },
-            {
-              "name": "label",
-              "type": "constant string",
-              "info": "A string to label the axis",
-              "ID": 1486
-            },
-            {
-              "name": "labelAnchor",
-              "type": "constant string",
-              "children": [
-                {
-                  "name": "'top'",
-                  "type": "string literal",
-                  "info": "top",
-                  "ID": 1488
-                },
-                {
-                  "name": "'right'",
-                  "type": "string literal",
-                  "info": "right",
-                  "ID": 1489
-                },
-                {
-                  "name": "'bottom'",
-                  "type": "string literal",
-                  "info": "bottom",
-                  "ID": 1490
-                },
-                {
-                  "name": "'left'",
-                  "type": "string literal",
-                  "info": "left",
-                  "ID": 1491
-                },
-                {
-                  "name": "'center'",
-                  "type": "string literal",
-                  "info": "center",
-                  "ID": 1492
-                }
-              ],
-              "info": "The label anchor",
-              "ID": 1487
-            },
-            {
-              "name": "labelOffset",
-              "type": "constant number",
-              "info": "The label position offset in pixels, typically for facet axes. Default is 0",
-              "ID": 1493
-            }
-          ],
-          "info": "The scale for the horizontal position",
-          "ID": 1404
-        },
-        {
-          "name": "y",
-          "type": "scale object",
-          "children": [
-            {
-              "name": "domain",
-              "type": "constant array",
-              "info": "The extent of the inputs, typically [min, max], or an array of ordinal or categorical values",
-              "ID": 1450
-            },
-            {
-              "name": "range",
-              "type": "constant array",
-              "info": "The extent of the outputs (visual values), typically [min, max], or an array of ordinal or categorical values",
-              "ID": 1451
-            },
-            {
-              "name": "reverse",
-              "type": "constant boolean",
-              "info": "Reverses the domain",
-              "ID": 1452
-            },
-            {
-              "name": "type",
-              "type": "constant string",
-              "children": [
-                {
-                  "name": "'linear'",
-                  "type": "quantitative data",
-                  "info": "The default linear transform scale",
-                  "ID": 1454
-                },
-                {
-                  "name": "'pow'",
-                  "type": "quantitative data",
-                  "info": "The power (exponential) transform scale",
-                  "ID": 1455
-                },
-                {
-                  "name": "'sqrt'",
-                  "type": "quantitative data",
-                  "info": "The square-root transform (pow transform with exponent = 0.5) scale",
-                  "ID": 1456
-                },
-                {
-                  "name": "'log'",
-                  "type": "quantitative data",
-                  "info": "The logarithmic transform scale. Can only be used when the domain does not include zero. The base defaults to 10",
-                  "ID": 1457
-                },
-                {
-                  "name": "'symlog'",
-                  "type": "quantitative data",
-                  "info": "The bi-symmetric logarithmic transform scale",
-                  "ID": 1458
-                },
-                {
-                  "name": "'ordinal'",
-                  "type": "ordinal data",
-                  "info": "The ordinal scale",
-                  "ID": 1459
-                },
-                {
-                  "name": "'utc'",
-                  "type": "temporal data",
-                  "info": "The UTC time scale. (Default for temporal data)",
-                  "ID": 1460
-                },
-                {
-                  "name": "'time'",
-                  "type": "temporal data",
-                  "info": "The local time scale",
-                  "ID": 1461
-                },
-                {
-                  "name": "'point'",
-                  "type": "ordinal data",
-                  "info": "The point scale",
-                  "ID": 1462
-                },
-                {
-                  "name": "'band'",
-                  "type": "ordinal data",
-                  "info": "The band scale",
-                  "ID": 1463
-                },
-                {
-                  "name": "'identity'",
-                  "type": "any data",
-                  "info": "The identity scale",
-                  "ID": 1464
-                }
-              ],
-              "info": "Typically the scale type is inferred automatically from data: strings and booleans imply an ordinal scale. Dates imply a UTC scale, anything else is linear",
-              "ID": 1453
-            },
-            {
-              "name": "exponent",
-              "type": "constant number",
-              "info": "Configurable value for the power scale (type: 'pow')",
-              "ID": 1465
-            },
-            {
-              "name": "base",
-              "type": "constant number",
-              "info": "Configurable value for the log scale (type: 'log'). Default is 10",
-              "ID": 1466
-            },
-            {
-              "name": "constant",
-              "type": "constant number",
-              "info": "Configurable value for the symlog scale (type: 'symlog'). Default is 1",
-              "ID": 1467
-            },
-            {
-              "name": "clamp",
-              "type": "constant boolean",
-              "info": "For quantitative scales: if true, clamp input values to the scale’s domain",
-              "ID": 1468
-            },
-            {
-              "name": "nice",
-              "type": "constant number",
-              "info": "For quantitative scales: if true (or a tick count), extend the domain to nice round values. A top-level nice option is supported as shorthand for setting scale.nice on all scales",
-              "ID": 1469
-            },
-            {
-              "name": "zero",
-              "type": "constant number",
-              "info": "For quantitative scales: if true, extend the domain to include zero if needed",
-              "ID": 1470
-            },
-            {
-              "name": "percent",
-              "type": "constant number",
-              "info": "For quantitative scales: if true, transform proportions in [0, 1] to percentages in [0, 100]",
-              "ID": 1471
-            },
-            {
-              "name": "transform",
-              "type": "function",
-              "info": "Function to be applied to all values before they are passed through the scale",
-              "ID": 1472
-            },
-            {
-              "name": "inset",
-              "type": "constant number",
-              "info": "Number of pixels to inset the default range",
-              "ID": 1473
-            },
-            {
-              "name": "round",
-              "type": "constant boolean",
-              "info": "Rounds the output value to the nearest integer (whole pixel)",
-              "ID": 1474
-            },
-            {
-              "name": "padding",
-              "type": "constant number",
-              "info": "A proportion in [0,1] determining how much of the range to reserve to inset first and last point or band. For ordinal scales",
-              "ID": 1475
-            },
-            {
-              "name": "align",
-              "type": "constant number",
-              "info": "A proportion in [0,1] determining where to distribute points or bands (0 = at start, 0.5 = at middle, 1 = at end). For ordinal scales",
-              "ID": 1476
-            },
-            {
-              "name": "paddingInner",
-              "type": "constant number",
-              "info": "A proportion in [0,1] determining how much of the range to reserve to separate adjacent bands. For band scales",
-              "ID": 1477
-            },
-            {
-              "name": "paddingOuter",
-              "type": "constant number",
-              "info": "A proportion in [0,1] determining how much of the range to reserve to inset first and last band. For band scales",
-              "ID": 1478
-            },
-            {
-              "name": "axis",
-              "type": "constant string",
-              "info": "The orientation: 'top' or 'bottom' for x; 'left' or 'right' for y; null to suppress",
-              "ID": 1479
-            },
-            {
-              "name": "ticks",
-              "type": "constant number",
-              "info": "The approximate number of ticks to generate",
-              "ID": 1480
-            },
-            {
-              "name": "tickSize",
-              "type": "constant number",
-              "info": "The size of each tick (in pixels; default 6)",
-              "ID": 1481
-            },
-            {
-              "name": "tickPadding",
-              "type": "constant number",
-              "info": "The separation between the tick and its label (in pixels; default 3)",
-              "ID": 1482
-            },
-            {
-              "name": "tickFormat",
-              "type": "constant string",
-              "info": "A function or format specifier to format tick values",
-              "ID": 1483
-            },
-            {
-              "name": "tickRotate",
-              "type": "constant number",
-              "info": "An angle in degrees clockwise to rotate tick labels. Default is 0",
-              "ID": 1484
-            },
-            {
-              "name": "grid",
-              "type": "constant boolean",
-              "info": "Flag determining whether to draw grid lines across the plot for each tick",
-              "ID": 1485
-            },
-            {
-              "name": "label",
-              "type": "constant string",
-              "info": "A string to label the axis",
-              "ID": 1486
-            },
-            {
-              "name": "labelAnchor",
-              "type": "constant string",
-              "children": [
-                {
-                  "name": "'top'",
-                  "type": "string literal",
-                  "info": "top",
-                  "ID": 1488
-                },
-                {
-                  "name": "'right'",
-                  "type": "string literal",
-                  "info": "right",
-                  "ID": 1489
-                },
-                {
-                  "name": "'bottom'",
-                  "type": "string literal",
-                  "info": "bottom",
-                  "ID": 1490
-                },
-                {
-                  "name": "'left'",
-                  "type": "string literal",
-                  "info": "left",
-                  "ID": 1491
-                },
-                {
-                  "name": "'center'",
-                  "type": "string literal",
-                  "info": "center",
-                  "ID": 1492
-                }
-              ],
-              "info": "The label anchor",
-              "ID": 1487
-            },
-            {
-              "name": "labelOffset",
-              "type": "constant number",
-              "info": "The label position offset in pixels, typically for facet axes. Default is 0",
-              "ID": 1493
-            }
-          ],
-          "info": "The scale for the vertical position",
-          "ID": 1449
         }
       ],
       "ID": 1388
