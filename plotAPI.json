@@ -19097,13 +19097,13 @@
             {
               "name": "nice",
               "type": "constant number",
-              "info": "For quantitative scales: if true (or a tick count), extend the domain to nice round values. Shorthand for scale specific nice option",
+              "info": "For quantitative scales: if a tick count (or true), extend the domain to nice round values. Shorthand for scale specific nice option",
               "ID": 3291
             },
             {
               "name": "caption",
               "type": "constant string",
-              "info": "Wraps the generated SVG element in an HTML figure element with a figcaption (as string or html tagges template literal. It returns the figure",
+              "info": "Wraps the generated SVG element in an HTML figure element with a figcaption (as string or html tagged template literal). It returns the figure",
               "ID": 3292
             }
           ],
